@@ -11,8 +11,6 @@ namespace NETConfAPI.Models
         [Required]
         public string Title { get; set; }
 
-        [ForeignKey("Speaker")]
-        public int SpeakerId { get; set; }
         public virtual Speaker Speaker { get; set; }
     }
 }

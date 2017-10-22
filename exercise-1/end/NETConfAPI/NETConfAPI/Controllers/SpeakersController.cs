@@ -19,7 +19,7 @@ namespace NETConfAPI.Controllers
         {
             this.context = context;
 
-            if (this.context.Conferences.Count() == 0) 
+            if (this.context.Conferences.Count() == 0)
             {
                 Utils.InitContext(context);
             }
@@ -95,11 +95,11 @@ namespace NETConfAPI.Controllers
                 return NotFound();
             }
 
-            var hasTalks = this.context.Talks.Count(c => c.SpeakerId == id) != 0;
+            var hasTalks = this.context.Talks.Count(c => c.Speaker != null && c.Speaker.Id == id) != 0;
 
             if (hasTalks)
             {
-                return StatusCode(StatusCodes.Status400BadRequest);    
+                return StatusCode(StatusCodes.Status400BadRequest);
             }
 
             this.context.Speakers.Remove(item);
