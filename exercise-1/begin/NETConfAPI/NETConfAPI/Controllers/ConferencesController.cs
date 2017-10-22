@@ -8,6 +8,7 @@ using NETConfAPI.Models;
 
 namespace NETConfAPI.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     public class ConferencesController : Controller
     {
@@ -23,7 +24,9 @@ namespace NETConfAPI.Controllers
             }
         }
 
-        // GET api/conferences
+        /// <summary>
+        /// Get Conferences
+        /// </summary> 
         [HttpGet]
         public IEnumerable<Conference> Get()
         {
@@ -34,7 +37,10 @@ namespace NETConfAPI.Controllers
             return items.ToList();
         }
 
-        // GET api/conferences/1
+        /// <summary>
+        /// Get a Conference
+        /// </summary>
+        /// <param name="id">The ID of the conference</param>      
         [HttpGet("{id}", Name = "GetConferencesById")]
         public IActionResult GetById(int id)
         {
@@ -51,7 +57,13 @@ namespace NETConfAPI.Controllers
             return new ObjectResult(item);
         }
 
-        // POST api/conferences
+        /// <summary>
+        /// Create new Conference
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns>A newly-created Conference</returns>
+        /// <response code="201">Returns the newly-created item</response>
+        /// <response code="400">If the item is null</response>    
         [HttpPost]
         public IActionResult Post([FromBody]Conference item)
         {
@@ -66,7 +78,11 @@ namespace NETConfAPI.Controllers
             return CreatedAtRoute("GetConferencesById", new { id = item.Id }, item);
         }
 
-        // PUT api/conferences/5
+        /// <summary>
+        /// Update Conference
+        /// </summary>
+        /// <param name="id">The Conference ID</param>  
+        /// <param name="updatedItem"></param>
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody]Conference updatedItem)
         {
@@ -89,7 +105,10 @@ namespace NETConfAPI.Controllers
             return new NoContentResult();
         }
 
-        // DELETE api/conferences/5
+        /// <summary>
+        /// Delete Conference
+        /// </summary>
+        /// <param name="id">The Conference ID</param>  
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
