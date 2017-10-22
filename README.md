@@ -1,4 +1,4 @@
-# Workshop: APIfiquemos el mundo con Azure API Management
+# Workshop: Let's APIfy the world with Azure API Management
 
 Today, all big cloud players like Amazon, Google and Azure provide an API Management solution that we can use to productize our data and Services in minutes, removing the friction we have while integrating them no matter if they are public or behind a virtual private network. Moreover, they help us to control, secure and document them, allowing developers of your company (or others) to use all the available tools in a unified and controlled way.
 
