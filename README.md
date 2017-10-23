@@ -7,13 +7,13 @@ During this workshop, we are going to implement a simple use case to demonstrate
 ## Concepts covered
 
 * API definitions (with Swagger)
-* Azure API Gateway configurations (Products and Policies)
+* API Gateways and configurations
 * Publisher portal
 * Developer portal
 
 ## Requirements
 
-* An [Azure account](https://portal.azure.com)
+* An [Azure account](https://azure.microsoft.com/en-us/free/?WT.mc_id=api_management_hero_a)
 * [Visual Studio](https://www.visualstudio.com/downloads/) for Windows or Mac.
 
 ## Prerequisites
@@ -45,5 +45,5 @@ Once the Service instance is created, you can start with the Exercises of this W
 ## Exercises
 
 1. [Create your first API](./exercise-1)
-1. [Configure your API with an Azure API Gateway](./exercise-2)
+1. [Configure your Azure API Management Service](./exercise-2)
 1. [Configure your Azure API Gateway](./exercise-3)
